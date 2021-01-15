@@ -7,7 +7,7 @@ import { User, Bundle, Token, LiquidityPosition, LiquidityPositionSnapshot, Pair
 import { Factory as FactoryContract } from '../types/templates/Pair/Factory'
 
 export const ADDRESS_ZERO = '0x0000000000000000000000000000000000000000'
-export const FACTORY_ADDRESS = '0xD3E51Ef092B2845f10401a0159B2B96e8B6c3D30'
+export const FACTORY_ADDRESS = '0xba831e62ac14d8500cef0367b14f383d7b1b1b0a'
 
 export let ZERO_BI = BigInt.fromI32(0)
 export let ONE_BI = BigInt.fromI32(1)
@@ -55,11 +55,11 @@ export function isNullEthValue(value: string): boolean {
 
 export function fetchTokenSymbol(tokenAddress: Address): string {
   // hard coded overrides
-  if (tokenAddress.toHexString() == '0xe0b7927c4af23765cb51314a0e0521a9645f0e2a') {
-    return 'DGD'
+  if (tokenAddress.toHexString() == '0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2') {
+    return 'UBQ'
   }
-  if (tokenAddress.toHexString() == '0x7fc66500c84a76ad7e9c93437bfc5ac33e2ddae9') {
-    return 'AAVE'
+  if (tokenAddress.toHexString() == '0x823803ec07a4f524d5d01f07cda4b7e815b9f005') {
+    return 'FREAK'
   }
 
   let contract = ERC20.bind(tokenAddress)
@@ -85,11 +85,11 @@ export function fetchTokenSymbol(tokenAddress: Address): string {
 
 export function fetchTokenName(tokenAddress: Address): string {
   // hard coded overrides
-  if (tokenAddress.toHexString() == '0xe0b7927c4af23765cb51314a0e0521a9645f0e2a') {
-    return 'DGD'
+  if (tokenAddress.toHexString() == '0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2') {
+    return 'UBQ'
   }
-  if (tokenAddress.toHexString() == '0x7fc66500c84a76ad7e9c93437bfc5ac33e2ddae9') {
-    return 'Aave Token'
+  if (tokenAddress.toHexString() == '0x823803ec07a4f524d5d01f07cda4b7e815b9f005') {
+    return 'FREAK'
   }
 
   let contract = ERC20.bind(tokenAddress)
@@ -125,7 +125,7 @@ export function fetchTokenTotalSupply(tokenAddress: Address): BigInt {
 
 export function fetchTokenDecimals(tokenAddress: Address): BigInt {
   // hardcode overrides
-  if (tokenAddress.toHexString() == '0x7fc66500c84a76ad7e9c93437bfc5ac33e2ddae9') {
+  if (tokenAddress.toHexString() == '0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2') {
     return BigInt.fromI32(18)
   }
 
